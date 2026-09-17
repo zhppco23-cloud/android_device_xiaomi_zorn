@@ -5,7 +5,9 @@
 //
 
 android_app {
-    name: "XiaomiParts",
+    // sm8650-common also provides XiaomiParts. Keep zorn's full-featured
+    // implementation as a distinct Soong module.
+    name: "XiaomiPartsZorn",
     defaults: [
         "SettingsLibDefaults",
     ],
@@ -24,7 +26,7 @@ android_app {
     static_libs: [
         "androidx.core_core",
         "org.lineageos.settings.resources",
-        "vendor.xiaomi.hardware.displayfeature-V2-java",
+        "vendor.xiaomi.hardware.displayfeature_aidl-V2-java",
         "vendor.xiaomi.hw.touchfeature-V1-java"
     ],
 

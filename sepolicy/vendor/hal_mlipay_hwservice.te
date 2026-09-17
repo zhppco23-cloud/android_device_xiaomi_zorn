@@ -1,0 +1,2 @@
+# HIDL Mlipay interface used by the platform-signed IFAA service.
+type hal_mlipay_hwservice, hwservice_manager_type, protected_hwservice;

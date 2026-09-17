@@ -1,0 +1,4 @@
+# Apps need to read fingerprint and payment-security state for the FIDO/IFAA
+# payment flow.  Keep isolated processes excluded, as in sm8650-common.
+get_prop({ appdomain -isolated_app_all }, vendor_fp_prop)
+get_prop({ appdomain -isolated_app_all }, vendor_payment_security_prop)

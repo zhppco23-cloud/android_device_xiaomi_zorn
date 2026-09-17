@@ -17,22 +17,16 @@ $(call inherit-product, device/xiaomi/zorn/device.mk)
 ## Device identifier
 PRODUCT_DEVICE := zorn
 PRODUCT_NAME := lineage_zorn
-PRODUCT_BRAND := REDMI
-PRODUCT_MODEL := 24117RK2CG
-PRODUCT_MANUFACTURER := xiaomi
-
-# Sakura flags
-SAKURA_OFFICIAL := true
-SAKURA_MAINTAINER := ArmSM
-SAKURA_BUILD_TYPE := gapps
+PRODUCT_BRAND := Redmi
+PRODUCT_MODEL := 24117RK2CC
+PRODUCT_MANUFACTURER := Xiaomi
 
 # bootanimation
 TARGET_BOOT_ANIMATION_RES := 1440
 
+# Redmi K80 (zorn), from OS2.0.215.0.VOKCNXM.
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BuildDesc=$(call normalize-path-list, "zorn zorn 15 AQ3A.240829.003 OS2.0.202.0.VOKMIXM release-keys")
-
-BUILD_FINGERPRINT := Xiaomi/zorn/zorn:15/AQ3A.240829.003/OS2.0.202.0.VOKMIXM:user/release-keys
+    BuildFingerprint=Redmi/zorn/zorn:15/AQ3A.240829.003/OS2.0.215.0.VOKCNXM:user/release-keys
 
 # GMS
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi

@@ -4,6 +4,17 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Keep UDFPS authentication active while the panel is off.  This must be
+         defined in the device overlay: the common SM8650 overlay intentionally
+         leaves the framework defaults unchanged. -->
+    <bool name="config_screen_off_udfps_enabled">true</bool>
+    <bool name="config_screen_off_udfps_default_on">true</bool>
+
+    <!-- UDFPS long-press wake sensor supplied by sensors.xiaomi.v2.  Without
+         this declaration AmbientDisplayConfiguration rejects screen-off UDFPS
+         before it checks the user setting. -->
+    <string name="config_dozeUdfpsLongPressSensorType" translatable="false">org.lineageos.sensor.udfps</string>
+
     <!-- Array of desired screen brightness in nits corresponding to the lux values
          in the config_autoBrightnessLevels array. The display brightness is defined as the measured
          brightness of an all-white image.

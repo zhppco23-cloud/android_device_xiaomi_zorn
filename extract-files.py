@@ -21,6 +21,7 @@ from extract_utils.main import (
 
 namespace_imports = [
     'device/xiaomi/zorn',
+    'device/xiaomi/sm8650-common',
     'hardware/qcom-caf/wlan',
     'hardware/qcom-caf/sm8650',
     'hardware/xiaomi',

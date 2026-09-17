@@ -1,0 +1,3 @@
+# zorn payment daemon requirements, matching sm8650-common commit 9928281.
+allow hal_mlipay_default vendor_miev_device:chr_file rw_file_perms;
+get_prop(hal_mlipay_default, vendor_fp_prop)

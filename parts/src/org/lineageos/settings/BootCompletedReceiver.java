@@ -75,17 +75,10 @@ public class BootCompletedReceiver extends BroadcastReceiver {
             // Override HDR types
             overrideHdrTypes(context);
 
-            // Register observer for Double Tap to Wake
+            // Register observer for Double Tap to Wake.
             registerDoubleTapToWakeObserver(context);
 
-            // force-enable SoFOD on lock screen
-            initTouchFeatureService();
-            if (xiaomiTouchFeatureAidl != null) {
-                xiaomiTouchFeatureAidl.setTouchMode(0, Touch_Fod_Enable, 1);
-                xiaomiTouchFeatureAidl.setTouchMode(0, Touch_Aod_Enable, 1);
-                xiaomiTouchFeatureAidl.setTouchMode(0, Touch_FodIcon_Enable, 1);
-                if (DEBUG) Log.i(TAG, "SoFOD features enabled on lock screen");
-            }
+            initializeTouchFeatures(context);
         } catch (Exception e) {
             Log.e(TAG, "Error during locked boot completed processing", e);
         }
@@ -93,7 +86,10 @@ public class BootCompletedReceiver extends BroadcastReceiver {
 
     private void handleBootCompleted(Context context) {
         if (DEBUG) Log.i(TAG, "Handling boot completed.");
-        // Add additional boot-completed actions if needed
+        // LOCKED_BOOT_COMPLETED can run before the vendor TouchFeature service
+        // is ready.  Retry after normal boot so wake gestures and SoFOD do not
+        // remain disabled for the rest of the session.
+        initializeTouchFeatures(context);
     }
 
     private void startServices(Context context) {
@@ -154,14 +150,40 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         if (DEBUG) Log.i(TAG, "Updating Double Tap to Wake status.");
         try {
             if (xiaomiTouchFeatureAidl == null) initTouchFeatureService();
+            if (xiaomiTouchFeatureAidl == null) {
+                Log.w(TAG, "TouchFeature service is unavailable");
+                return;
+            }
             boolean enabled = Settings.Secure.getInt(
                     context.getContentResolver(),
                     Settings.Secure.DOUBLE_TAP_TO_WAKE,
                     0
             ) == 1;
-            xiaomiTouchFeatureAidl.setTouchMode(0, DOUBLE_TAP_TO_WAKE_MODE, enabled ? 1 : 0);
+            // Some vendor implementations expose the V1 AIDL contract only.
+            // setTouchMode() was added later and returns "Unimplemented" there;
+            // setModeValue() is the compatible equivalent for this operation.
+            xiaomiTouchFeatureAidl.setModeValue(
+                    0, DOUBLE_TAP_TO_WAKE_MODE, enabled ? 1 : 0);
         } catch (Exception e) {
             Log.e(TAG, "Failed to update Tap to Wake status", e);
+        }
+    }
+
+    private void initializeTouchFeatures(Context context) {
+        initTouchFeatureService();
+        if (xiaomiTouchFeatureAidl == null) {
+            Log.w(TAG, "Cannot initialize touch features: service is unavailable");
+            return;
+        }
+
+        updateTapToWakeStatus(context);
+        try {
+            xiaomiTouchFeatureAidl.setModeValue(0, Touch_Fod_Enable, 1);
+            xiaomiTouchFeatureAidl.setModeValue(0, Touch_Aod_Enable, 1);
+            xiaomiTouchFeatureAidl.setModeValue(0, Touch_FodIcon_Enable, 1);
+            if (DEBUG) Log.i(TAG, "SoFOD features enabled on lock screen");
+        } catch (Exception e) {
+            Log.e(TAG, "Failed to enable SoFOD features", e);
         }
     }
 
@@ -173,6 +195,10 @@ public class BootCompletedReceiver extends BroadcastReceiver {
             IBinder binder = Binder.allowBlocking(
                     ServiceManager.waitForDeclaredService(fqName)
             );
+            if (binder == null) {
+                Log.w(TAG, "TouchFeature service is not declared");
+                return;
+            }
             xiaomiTouchFeatureAidl = ITouchFeature.Stub.asInterface(binder);
             if (DEBUG) Log.i(TAG, "TouchFeature service connected");
         } catch (Exception e) {

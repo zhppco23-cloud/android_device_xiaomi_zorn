@@ -20,7 +20,6 @@ package org.lineageos.settings.turbocharging;
  import android.content.Intent;
  import android.os.Handler;
  import android.os.IBinder;
- import android.os.UEventObserver;
  import android.util.Log;
  
  import androidx.preference.PreferenceManager;
@@ -37,31 +36,17 @@ package org.lineageos.settings.turbocharging;
  public class TurboChargingService extends Service {
      private static final String TAG = "TurboChargingService";
      private static final String CHARGE_CURRENT_FILE = "/sys/class/power_supply/battery/constant_charge_current";
-     private static final String USB_ONLINE_FILE = "/sys/class/power_supply/usb/online";
- 
      private static final String PROP_TURBO_CURRENT = "persist.sys.turbo_charge_current";
  
      private static final String DEFAULT_OFF_VALUE = "6000000";
      private static final String DEFAULT_ON_VALUE = "9750000";
  
-     private UEventObserver mObserver;
      private Handler mHandler = new Handler();
      private Runnable mMonitorRunnable;
  
      @Override
      public void onCreate() {
          Log.d(TAG, "Starting TurboChargingService");
- 
-         mObserver = new UEventObserver() {
-             @Override
-             public void onUEvent(UEvent event) {
-                 String chargerStatus = event.get("POWER_SUPPLY_ONLINE");
-                 if (chargerStatus != null && chargerStatus.equals("1")) {
-                     updateChargeCurrent();
-                 }
-             }
-         };
-         mObserver.startObserving("DEVPATH=/sys/class/power_supply/usb");
  
          updateChargeCurrent();
          startMonitoring();
@@ -146,7 +131,6 @@ package org.lineageos.settings.turbocharging;
  
      @Override
      public void onDestroy() {
-         mObserver.stopObserving();
          mHandler.removeCallbacks(mMonitorRunnable);
          super.onDestroy();
      }

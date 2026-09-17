@@ -207,74 +207,75 @@ vendor/lib64/hw/com.dsi.ant@1.0-impl.so
 vendor/lib64/libagm.so;DISABLE_CHECKELF
 
 # Audio
-odm/lib64/libaudioroute_ext.so
-odm/lib64/libcrussp.so;DISABLE_CHECKELF
-odm/lib64/libvoipspacespeech.so
-vendor/etc/audio_cloud_control_white_list.xml
-vendor/etc/mem_logger_config.xml
-vendor/etc/models/acd/environment.eai
-vendor/etc/models/acd/event.eai
-vendor/etc/models/acd/music.eai
-vendor/etc/models/acd/speech.eai
-vendor/lib64/hw/audio.primary.pineapple.so;DISABLE_CHECKELF
-vendor/lib64/hw/android.hardware.soundtrigger@2.3-impl.so
-vendor/lib64/hw/gyro_fusion_interface.so
-vendor/lib64/libVoiceSdk.so
-vendor/lib64/lib_misound_asc.so
-vendor/lib64/libadm.so;DISABLE_CHECKELF
-vendor/lib64/libarmemlog.so;DISABLE_CHECKELF
-vendor/lib64/libar-pal.so;DISABLE_CHECKELF
-vendor/lib64/libaudio_log_utils.so
-vendor/lib64/libaudiocloudctrl.so
-vendor/lib64/libcapiv2svacnnvendor.so
-vendor/lib64/libcapiv2svarnnvendor.so
-vendor/lib64/libcapiv2udk7vendor.so
-vendor/lib64/libcapiv2uvvendor.so
-vendor/lib64/libdlbpreg.so
-vendor/lib64/libkaraokepal.so;DISABLE_CHECKELF
-vendor/lib64/libmcs.so;DISABLE_CHECKELF
-vendor/lib64/libmis6.so
-vendor/lib64/libmisight.so
-vendor/lib64/libmisfpsop.so
-vendor/lib64/libmisops.so
-vendor/lib64/libmisoundfx_ext.so
-vendor/lib64/libmisoundsa.so
-vendor/lib64/libmisoundsa_fx.so
-vendor/lib64/libmispowerop.so
-vendor/lib64/libpal_net_if.so
-vendor/lib64/libqtigefar.so
-vendor/lib64/libresampler.so
-vendor/lib64/libswspatializer_ext.so
-vendor/lib64/libtensorflowlite_c.so:vendor/lib64/libtensorflowlite_c_vendor.so;FIX_SONAME
-vendor/lib64/libultrasound_notify.so
-vendor/lib64/libxlog.so
-vendor/lib64/vendor.qti.hardware.pal@1.0-impl.so
-vendor/lib64/vendor.qti.voiceprint@1.0.so
+odm/lib64/libaudioroute_ext.so|9292990c464f3eacb7122e56f770721c96a98ed5|cbb863aea3ad55699c3d0aa79ecbe23d0a680afe
+odm/lib64/libcrussp.so;DISABLE_CHECKELF|8c58bccdba7adc67fa091514d25638e6404fd353
+odm/lib64/libvoipspacespeech.so|16573cd9732cdf8e3a91ade0d71fdf2ae4346f5e
+vendor/etc/audio_cloud_control_white_list.xml|884d23d46317a63050f6ab0aa811caa7eaab54bf
+vendor/etc/mem_logger_config.xml|def1abee9a58d0b9b3194e89449f0ab537f5ad6a
+vendor/etc/models/acd/environment.eai|12ea2fd7dbf5fde4fccc45a091e71090a02e95bf
+vendor/etc/models/acd/event.eai|6228534be41c1d6fb3edc759831e2a8309904512
+vendor/etc/models/acd/music.eai|71de22cd99628a3ff71742f3eee727f5c027aebb
+vendor/etc/models/acd/speech.eai|7c77495f1bd110511ce78409569e4c380b23b942
+vendor/lib64/hw/audio.primary.pineapple.so;DISABLE_CHECKELF|1a7bc6460de06a197ef3521cd723e535ad27d3a3|a05fc79c4aff7297f6cafe3cda0faa4fb0bada59
+vendor/lib64/hw/android.hardware.soundtrigger@2.3-impl.so|f6515e7d29072dae4f037d1be56e238e3e16028e
+vendor/lib64/hw/gyro_fusion_interface.so|f641d0218448881849d0cbf4f5759a735227125a
+vendor/lib64/libVoiceSdk.so|4a993f20d8e8ea68da0951524958b276e572a36f|95c8611f2d4735d5f61348103d5026f7e3039770
+vendor/lib64/lib_misound_asc.so|542f403ffb06e44c8c6c7998b372d325364fbb20
+vendor/lib64/libadm.so;DISABLE_CHECKELF|c0e52a60399e60237af8b4b80f81eeb59336a8c0
+vendor/lib64/libarmemlog.so;DISABLE_CHECKELF|a3b7280a851015460a1c5d6416ae472266e73b9f
+vendor/lib64/libar-pal.so;DISABLE_CHECKELF|15e3dce2bbe4e9a95b03fe5d72966261cd79d1e5|ff627988fd117da4d5ad609267a375d1afe0532a
+vendor/lib64/libaudio_log_utils.so|fd8f86d5aeddf23dd78d75cabd7434404d7e679f
+vendor/lib64/libaudiocloudctrl.so|a120ebd3aecbe3b9b7185b6a30383a1761814ad6
+vendor/lib64/libcapiv2svacnnvendor.so|3eede468420b85eddfb46818f8440a7daca9537e
+vendor/lib64/libcapiv2svarnnvendor.so|f04abd87e5c919f3ca1baa3d7292b0347694f39e
+vendor/lib64/libcapiv2udk7vendor.so|8f3bbf5a735e8c226c21dc121e77dd1d21bafdf8
+vendor/lib64/libcapiv2uvvendor.so|ad95be140cac0f0caaa8cb7bd6bcbb1e48ccdc89|dc68e2fe3d884f135bd24ac57e270d91838bd15c
+vendor/lib64/libdlbpreg.so|1161f85c75e82e24b6b36b992c2406c7d6d7fafe|19df20a03b18bbe6321b47f9aebc0107d64c48d7
+vendor/lib64/libkaraokepal.so;DISABLE_CHECKELF|b6141fd46b0f0cadc0e889960d2b1dff7bb4404f
+vendor/lib64/libmcs.so;DISABLE_CHECKELF|b8cf7b2ae571129df8f6c6cdb85a1e5a10ace057
+vendor/lib64/libmis6.so|c527e03dfade987c6a38a60a8ef46f59ffce6895
+vendor/lib64/libmisight.so|0b3d4458a2ad2c3f9426b80e5524b6c75b9593cf
+vendor/lib64/libmisfpsop.so|99f2e3eb38e3fcfcb3937e6f7c005466c8a78eb6
+vendor/lib64/libmisops.so|2baf2f4143f39269d17afcae9721b43448ce6233
+vendor/lib64/libmisoundfx_ext.so|102247201f23d537e3e180a4ab8f9672041b9f6d
+vendor/lib64/libmisoundsa.so|38bf858bd3074f6dae3c05c796b20a60de60711c
+vendor/lib64/libmisoundsa_fx.so|2e1d62ef45b2850c753ca8467cf18231e8f31a03
+vendor/lib64/libmispowerop.so|1a8b2de8eb02a459cb9a72d5faf6a71af00d9657
+vendor/lib64/libpal_net_if.so|fea3227c763f0b109e9a48cd194fdb3e635deb9c
+vendor/lib64/libqtigefar.so|27f3bee8f62910e3dbe167cf6afcd322325c5895
+vendor/lib64/libresampler.so|b38622335b7a883e06f4f48e0f8df33c179d034f
+vendor/lib64/libswspatializer_ext.so|796f8242b6b2e22d82b267c505e98d8d883d6a20
+vendor/lib64/libtensorflowlite_c.so:vendor/lib64/libtensorflowlite_c_vendor.so;FIX_SONAME|374286087a5fd65bd651697968d38dcf57b5e164|fca3e15a872d11dbe061fe383a13a8e1f7d704a1
+vendor/lib64/libultrasound_notify.so|f0b4cf58d7c1fdba04f65e73694bc1c49f4e15b5
+vendor/lib64/libxlog.so|9566ba0611d1409f37a1025ffe0283f9d9205e30
+vendor/lib64/vendor.qti.hardware.pal@1.0-impl.so|2bb8c52cc82440dc4bfacb41785e3e7ebaadb708
+vendor/lib64/vendor.qti.voiceprint@1.0.so|18e9700717988a37a06b9d1d8930b224b75a4df8
 
 # Audio (Config)
-vendor/etc/audio/sku_pineapple/adsp_sleep_monitor.conf
-vendor/etc/audio/sku_pineapple/mixer_paths_pineapple_aim.xml
-vendor/etc/audio/sku_pineapple/mixer_paths_pineapple_cdp_wsa883x.xml
-vendor/etc/audio/sku_pineapple/mixer_paths_pineapple_cdp.xml
-vendor/etc/audio/sku_pineapple/mixer_paths_pineapple_qrd_sku2.xml
-vendor/etc/audio/sku_pineapple/mixer_paths_pineapple_qrd.xml
-vendor/etc/audio/sku_pineapple/resourcemanager_pineapple_aim.xml
-vendor/etc/audio/sku_pineapple/resourcemanager_pineapple_cdp.xml
-vendor/etc/audio/sku_pineapple/resourcemanager_pineapple_qrd_sku2.xml
-vendor/etc/audio/sku_pineapple/resourcemanager_pineapple_qrd.xml
-odm/etc/audio_policy_engine_configuration_mi.xml:odm/etc/audio_policy_engine_configuration.xml
-odm/etc/audio_policy_engine_default_stream_volumes.xml
-odm/etc/audio_policy_engine_product_strategies.xml
-odm/etc/audio_policy_engine_stream_volumes.xml
-odm/etc/backend_conf.xml
-odm/etc/usecaseKvManager.xml
-vendor/etc/audio_diag.cfg
-vendor/etc/audio_policy_volumes.xml
-vendor/etc/card-defs.xml
-vendor/etc/default_volume_tables.xml
-vendor/etc/kvh2xml.xml
-vendor/etc/microphone_characteristics.xml
-vendor/etc/usecaseKvManager.xml
+vendor/etc/audio_policy_configuration.xml|9925c263aa876672f4d1113bc5eae4a8c79b74cf
+vendor/etc/audio/sku_pineapple/adsp_sleep_monitor.conf|d00254c3a6a72d49b4278c997d816540aa4e5558
+vendor/etc/audio/sku_pineapple/mixer_paths_pineapple_aim.xml|ebc351235a64f5984286bc51ee404aeef2382ffc
+vendor/etc/audio/sku_pineapple/mixer_paths_pineapple_cdp_wsa883x.xml|558209b199963081f2dd45e46254b61909e936e7
+vendor/etc/audio/sku_pineapple/mixer_paths_pineapple_cdp.xml|21b4f027a8f10cf0aeb9127a6aad609520936bb1
+vendor/etc/audio/sku_pineapple/mixer_paths_pineapple_qrd_sku2.xml|a483e37e4312660eb6acfd25b9d66df1ac380e57
+vendor/etc/audio/sku_pineapple/mixer_paths_pineapple_qrd.xml|296cdb60bd512283b6bbf855838019db3c642521
+vendor/etc/audio/sku_pineapple/resourcemanager_pineapple_aim.xml|c9832dc65f97ed15bcb4aae538922422322c284d
+vendor/etc/audio/sku_pineapple/resourcemanager_pineapple_cdp.xml|bc0e9e58691625a74a11149d7c5baf1f68a59354
+vendor/etc/audio/sku_pineapple/resourcemanager_pineapple_qrd_sku2.xml|6d460029a413b84c73bbae964196bde66cad995c
+vendor/etc/audio/sku_pineapple/resourcemanager_pineapple_qrd.xml|8d4bc934d7663f7b2cb393ae784421df7603cbb2
+odm/etc/audio_policy_engine_configuration_mi.xml:odm/etc/audio_policy_engine_configuration.xml|ef0cdc9ac80ab1a14c279e3f73f8a2090f360bda
+odm/etc/audio_policy_engine_default_stream_volumes.xml|6a02168032d91dd0cc6e2d14bf5f3757441d1025
+odm/etc/audio_policy_engine_product_strategies.xml|57074da402535ad5ab160bbbe7a92ac3f012f954
+odm/etc/audio_policy_engine_stream_volumes.xml|31d5613ea1f894d96767029bb1c8ff18f3a0d4ea
+odm/etc/backend_conf.xml|81c04dc982c64f506409191194d2113310f93411
+odm/etc/usecaseKvManager.xml|158f8993adffdc50363f41edaf26a5f9847df987
+vendor/etc/audio_diag.cfg|fbe2d281d54368df3c5e9c25e38765b60f95c53b
+vendor/etc/audio_policy_volumes.xml|82c8c27acff0972087b955770a1b621ee3951340
+vendor/etc/card-defs.xml|42c6ee673d944d7ff87a2dd2964221a6ba056c73
+vendor/etc/default_volume_tables.xml|35722acb2dd36ed2a3850a66849c94b904813aa0
+vendor/etc/kvh2xml.xml|18dc30210f02d9d862632b88602d88f67597f8ca
+vendor/etc/microphone_characteristics.xml|881f175700b9032eec2e4c3afa6e491813bdd569
+vendor/etc/usecaseKvManager.xml|c60aee17cf5a682e6b7274c08829d3e74534c5a1
 
 # Audio (Dolby)
 vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service
@@ -287,14 +288,14 @@ vendor/lib64/vendor.dolby.hardware.dms@2.0.so
 vendor/lib64/vendor.dolby.hardware.dms@2.0-impl.so
 
 # Audio (Config)
-odm/etc/audio/sku_pineapple/IRS/mixer_paths_pineapple_mtp.xml
-odm/etc/audio/sku_pineapple/IRS/mixer_paths_overlay_dynamic.xml
-odm/etc/audio/sku_pineapple/IRS/mixer_paths_overlay_static.xml
-odm/etc/audio/sku_pineapple/IRS/resourcemanager_pineapple_mtp.xml
-odm/etc/audio/sku_pineapple/mixer_paths_pineapple_mtp.xml
-odm/etc/audio/sku_pineapple/resourcemanager_pineapple_mtp.xml
-vendor/etc/audio/sku_pineapple/mixer_paths_pineapple_mtp.xml
-vendor/etc/audio/sku_pineapple/resourcemanager_pineapple_mtp.xml
+odm/etc/audio/sku_pineapple/IRS/mixer_paths_pineapple_mtp.xml|c2c03da0a89489d1d4db325bd063f5c54baf42a8
+odm/etc/audio/sku_pineapple/IRS/mixer_paths_overlay_dynamic.xml|0c0ff1d3aace49218d91c13b28601dce0b26e13f
+odm/etc/audio/sku_pineapple/IRS/mixer_paths_overlay_static.xml|0dba3cff10de0256f11784bee6231800b8ecaf62
+odm/etc/audio/sku_pineapple/IRS/resourcemanager_pineapple_mtp.xml|7a8d29a9298f0ff6956e5081f54fd548bb5ab78c
+odm/etc/audio/sku_pineapple/mixer_paths_pineapple_mtp.xml|c2c03da0a89489d1d4db325bd063f5c54baf42a8
+odm/etc/audio/sku_pineapple/resourcemanager_pineapple_mtp.xml|7a8d29a9298f0ff6956e5081f54fd548bb5ab78c
+vendor/etc/audio/sku_pineapple/mixer_paths_pineapple_mtp.xml|c2c03da0a89489d1d4db325bd063f5c54baf42a8
+vendor/etc/audio/sku_pineapple/resourcemanager_pineapple_mtp.xml|be98cfb6d7c78dddcd97e7bf584af0ae484fe729
 
 # Audio firmware
 odm/firmware/aw882xx_acf.bin
@@ -1902,7 +1903,6 @@ vendor/etc/init/vendor.xiaomi.hardware.displayfeature_aidl-service.rc
 vendor/etc/vintf/manifest/vendor.xiaomi.hardware.displayfeature_aidl-service.xml
 vendor/lib64/libdisplayfeature.so
 vendor/lib64/libdisplayfeatureservice.so
-vendor/lib64/vendor.xiaomi.hardware.displayfeature_aidl-V2-ndk.so
 
 # Display HDR
 vendor/lib64/libhdr_backlight_adapter.so
@@ -2026,14 +2026,18 @@ vendor/lib64/vendor.qti.hardware.embmsslaidl-V1-ndk.so
 vendor/lib64/vendor.qti.esepowermanager@1.0.so
 
 # Fingerprint
-odm/lib64/hw/fingerprint.goodix_us.so:odm/lib64/hw/fingerprint.goodix_us.default.so;FIX_SONAME
-odm/lib64/hw/fingerprint.qcom_us.so:odm/lib64/hw/fingerprint.qcom_us.default.so;FIX_SONAME
-odm/lib64/libgf_hal.so
-odm/lib64/libqc_hal.so
-vendor/etc/permissions/qti_fingerprint_interface.xml
-vendor/lib64/com.fingerprints.fpc.extension-V1-ndk.so
-vendor/lib64/vendor.xiaomi.hardware.fx.tunnel-V1-ndk.so
-vendor/lib64/vendor.qti.hardware.fingerprint-V1-ndk.so
+odm/etc/vintf/manifest/fod-aidl.xml|44bd0e8264472d58cde8e7aee5fb545a5db103f3
+# Map zorn's ultrasonic modules to names the unmodified LOS fingerprint
+# service already probes.  Each vendor HAL rejects a non-matching sensor,
+# allowing the next candidate to be tried.
+odm/lib64/hw/fingerprint.goodix_us.so:odm/lib64/hw/fingerprint.goodix.default.so;FIX_SONAME|a39ff27c31720da9c3a698c7eccfa82cb4dac6c8|507abec175e964dcf02e1e4d0d7e9bead7f13d01
+odm/lib64/hw/fingerprint.qcom_us.so:odm/lib64/hw/fingerprint.fpc.default.so;FIX_SONAME|6efdc1573bde6695dec6a4d47f2954104c780cad|e38e4f15c859576bd1d597be71c0dc3fb90e0c55
+odm/lib64/libgf_hal.so|b69dc8c5a33e4400096f4d84734ce50c0dbe3322
+odm/lib64/libqc_hal.so|48f09e7d8818ee16b401d7ca8b4968b162f77596
+vendor/etc/permissions/qti_fingerprint_interface.xml|c4f114c209e77c0d53e40e05078dfc7fda434a21
+vendor/lib64/com.fingerprints.fpc.extension-V1-ndk.so|25f85f0eebe630ef8912ab3ccf72fe570495449d
+vendor/lib64/vendor.xiaomi.hardware.fx.tunnel-V1-ndk.so|85f62bb3d768d99ec6b353e793f433b757ceeecf
+vendor/lib64/vendor.qti.hardware.fingerprint-V1-ndk.so|51d35c9f76e61325e58cc55263ef09a65b2bd10a
 
 # FM
 vendor/etc/init.qti.fm.sh
@@ -2050,7 +2054,6 @@ vendor/lib64/hw/libqtigatekeeper.so
 odm/bin/hw/android.hardware.gnss-aidl-service-qti
 odm/etc/init/android.hardware.gnss-aidl-service-qti.rc
 odm/etc/izat_device.conf
-odm/etc/vintf/manifest/android.hardware.gnss-aidl-service-qti.xml
 odm/etc/vintf/manifest/vendor.qti.gnss-service.xml
 odm/lib64/android.hardware.gnss-aidl-impl-qti.so
 odm/lib64/vendor.qti.gnss-service.so
@@ -3149,6 +3152,9 @@ vendor/etc/init/vendor.qti.sla.service@1.0-service.rc
 vendor/etc/sla/slad.conf
 vendor/lib64/vendor.qti.sla.service@1.0-impl.so
 vendor/lib64/vendor.qti.sla.service@1.0.so
+
+# IFAA
+product/app/IFAAService/IFAAService.apk:product/app/IFAAServiceZorn/IFAAServiceZorn.apk|3b6fe8c8b9cbf08bef714be6329915077eeb62f2
 
 # Soter
 mi_ext/product/app/SoterService/SoterService.apk:product/app/SoterService/SoterService.apk

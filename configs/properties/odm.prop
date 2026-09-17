@@ -1,6 +1,3 @@
-# Bluetooth
-bluetooth.device.default_name=POCO F7 PRO
-
 # Camera
 debug.config.video.p3.encode.support=true
 debug.config.video.p3.decode.support=true
@@ -74,6 +71,7 @@ persist.vendor.dc_backlight.enable=false
 debug.sf.set_idle_timer_ms=110
 
 # Fingerprint
+ro.vendor.sensors.xiaomi.udfps=true
 persist.vendor.sys.fp.expolevel=0x88
 persist.vendor.fingerprint.type=udfps
 persist.vendor.fingerprint.sensor_location=721|2482|105
@@ -81,8 +79,5 @@ persist.vendor.fingerprint.sensor_location=721|2482|105
 # Qti
 ro.vendor.qti.va_odm.support=1
 
-# Marketname
-ro.product.marketname=POCO F7 PRO
-
-# USB
-vendor.usb.product_string=POCO F7 PRO
+# Model-specific properties
+import /odm/etc/build_${ro.boot.hwc}.prop

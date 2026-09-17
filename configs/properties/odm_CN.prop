@@ -1,6 +1,14 @@
 bluetooth.device.default_name=REDMI K80
 ro.product.marketname=REDMI K80
+# Xiaomi KeyMint/Soter uses these identities for device ID attestation.
+# Keep them aligned with the stock China zorn ODM build properties.
+ro.product.model_for_attestation=24117RK2CC
+ro.product.brand_for_attestation=Redmi
+ro.product.name_for_attestation=zorn
+ro.product.device_for_attestation=zorn
+ro.product.manufacturer_for_attestation=Xiaomi
 ro.product.odm.brand=Redmi
+ro.product.odm.device=zorn
 ro.product.odm.model=24117RK2CC
 ro.product.odm.name=zorn
 vendor.usb.product_string=REDMI K80

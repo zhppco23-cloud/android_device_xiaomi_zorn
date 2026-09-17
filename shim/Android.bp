@@ -1,29 +1,8 @@
 //
-// Copyright (C) 2020 The LineageOS Project
+// Copyright (C) 2024 The LineageOS Project
 //
 // SPDX-License-Identifier: Apache-2.0
 //
-
-cc_library_shared {
-    name: "libcodec2_hidl_shim",
-    srcs: ["libcodec2_hidl_shim.cpp"],
-    shared_libs: [
-        "libcodec2_hidl@1.0",
-    ],
-    vendor: true,
-}
-
-cc_library_shared {
-    name: "libshim",
-    shared_libs: [
-        "libui",
-        "libutils",
-    ],
-    srcs: [
-        "libshim.cpp",
-    ],
-    vendor: true,
-}
 
 cc_library_shared {
     name: "libcameraflare_shim",
@@ -42,6 +21,6 @@ cc_library_shared {
 cc_library_shared {
     name: "libcameraplugin_shim",
     srcs: ["libcameraplugin_shim/libcameraplugin_shim.cpp"],
-    shared_libs: ["libui","libutils"],
+    shared_libs: ["libui", "libutils"],
     vendor: true,
 }

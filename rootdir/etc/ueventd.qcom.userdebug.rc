@@ -1,0 +1,3 @@
+# XiaomiParts controls the charging current through this node. The stock
+# ueventd configuration imports this zorn-specific extension.
+/sys/class/power_supply/battery/constant_charge_current 0664 system system
